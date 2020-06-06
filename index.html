@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+        <meta charset="utf-8">
+		<title>Block Breaker</title>
+	</head>
+    
+    <style>
+        #gameover{
+            position: relative;
+            height:505px;
+            width:400px;
+            background:rgba(0,0,0,0.5);
+            margin-top: 80px;
+            left:auto;
+            display:none ;
+        }
+        
+        #youwon{
+            position: absolute;
+            width:150px;
+            top:120px;
+            left:135px;  
+            display:none;
+        }
+        #youloose{
+            width:200px;
+            position: absolute;
+            top:170px;
+            left:110px;
+            display:none;
+        }
+        #restart{
+            position: absolute;
+            top:260px;
+            color:white;
+            left:160px;
+            cursor: pointer;
+            font-size: 20px;
+            letter-spacing:1px;
+            display:none ;
+        }
+    </style>
+
+	<body style="background-image: url(images/bg.jpg);
+    background-attachment: fixed;background-repeat: no-repeat;">
+        <center>
+            <div id="gameover">
+                <img src="images/youwin.png" alt="" id="youwon">
+                <img src="images/gameover.png" alt="" id="youloose">
+                <div id="restart">Play Again!</div>
+            </div>
+            
+            <canvas id="blockBreaker" height="500px" width="400px" style="border:2px solid white; margin-left: ;margin-right: auto;margin-top:80px;">
+            </canvas>
+        </center>
+        
+        <script src="game.js"></script>
+	</body>
+</html>
