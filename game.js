@@ -1,18 +1,18 @@
 const cvs = document.getElementById("blockBreaker");
 const ctx = cvs.getContext("2d");
 
-const paddleWidth = 100;
+const paddleWidth = 80;
 const paddleHeight = 15;
 const paddleBottomMargin = 40;
 let life = 3;
 let score=0;
 let scoreUnit=10;
 let level=1;
-let maxLevel=4;
+let maxLevel=10;
 
 // Media contents
 const bgImg = new Image();
-bgImg.src = "images/game-bg.jpg";
+bgImg.src = "images/game-bg.png";
 const scoreImg=new Image();
 scoreImg.src="images/score.png";
 const lifeImg=new Image();
@@ -30,9 +30,9 @@ const paddle = {
 }
 
 function drawPaddle() {
-    ctx.fillStyle = "yellow";
+    ctx.fillStyle = "white";
     ctx.fillRect(paddle.x, paddle.y, paddle.width, paddle.height);
-    ctx.strokeStyle = "gray";
+    ctx.strokeStyle = "black";
     ctx.strokeRect(paddle.x, paddle.y, paddle.width, paddle.height);
 }
 
@@ -78,7 +78,7 @@ const ball = {
 function drawBall() {
     ctx.beginPath();
     ctx.arc(ball.x, ball.y, ballRadius, 0, Math.PI * 2);
-    ctx.fillStyle = "yellow";
+    ctx.fillStyle = "white";
     ctx.fill();
     ctx.strokeStyle = "black";
     ctx.stroke();
@@ -137,13 +137,13 @@ function ballBrickCollision(){
 
 const brick = {
     row: 1,
-    col: 5,
-    width: 55,
+    col: 8,
+    width: 45,
     height: 20,
-    offSetLeft: 20,
-    offSetTop: 20,
+    offSetLeft: 4.5,
+    offSetTop: 4.5,
     marginTop: 40,
-    fillColor: "white",
+    fillColor: "orange",
     strokeColor: "black"
 }
 
