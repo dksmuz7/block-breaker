@@ -180,7 +180,7 @@ function showGameStats(text,textX,textY,img,imgX,imgY){
     ctx.fillStyle="white";
     ctx.font="25px serif";
     ctx.fillText(text,textX,textY);
-    ctx.drawImage(img,imgX,imgY,25,5);
+    ctx.drawImage(img,imgX,imgY,20,20);
 }
 
 let isGameOver=false;
@@ -217,9 +217,9 @@ function draw() {
     drawPaddle();
     drawBall();
     drawBricks();
-    showGameStats(score,35,25,scoreImg,10,10);
-    showGameStats(life,cvs.width-25,25,lifeImg,cvs.width-55,5);
-    showGameStats(level,cvs.width/2,25,levelImg,cvs.width/2-30,5);
+    showGameStats(score,35,30,scoreImg,10,10);
+    showGameStats(life,cvs.width-25,30,lifeImg,cvs.width-55,10);
+    showGameStats(level,cvs.width/2,30,levelImg,cvs.width/2-30,10);
 }
 
 function update() {
